@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------
 
 /* ================================================
-   PRODUCT CATALOGUE
+   PRODUCT CATALOG
    ================================================ */
 
 const products = [
@@ -2734,8 +2734,8 @@ function initializeContactMap() {
     if (!mapElement) return;
     
     // Coordinates for location
-    const latitude = 40.2204;
-    const longitude = -74.0121;
+    const latitude = 32.77657;
+    const longitude = -79.93092;
     
     // Create map
     const map = L.map('contact-map').setView([latitude, longitude], 15);
@@ -3698,4 +3698,5 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ================================================
    END OF FILE
    ================================================ */
+
 
