@@ -3689,6 +3689,38 @@ select.autofilled:focus {
         width: 100%;
         height: 200px;
     }
+   
+   .category-tabs,
+   .browse-tabs {
+       overflow-x: auto;
+       overflow-y: hidden;
+       white-space: nowrap;
+       -webkit-overflow-scrolling: touch;
+       scrollbar-width: thin;
+       padding-bottom: 5px;
+   }
+
+   .category-tabs::-webkit-scrollbar {
+       height: 4px;
+   }
+
+   .category-tabs::-webkit-scrollbar-thumb {
+       background: #ccc;
+       border-radius: 4px;
+   }
+
+   /* If tabs are in a flex container */
+   .category-tabs {
+       display: flex;
+       flex-wrap: nowrap;
+       gap: 8px;
+   }
+
+   .category-tab,
+   .tab-button {
+       flex-shrink: 0;
+       min-width: fit-content;
+   }
     
     /* --- Product Page --- */
     .product-details-section {
@@ -3851,6 +3883,27 @@ select.autofilled:focus {
         width: 100%;
         height: 150px;
     }
+   
+   .checkout-main,
+   .checkout-grid,
+   .checkout-layout {
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+   }
+
+   .order-summary-panel {
+       position: static !important;
+       width: 100% !important;
+       margin-top: 20px;
+       order: 2; /* Moves it below other content */
+   }
+
+   .checkout-left,
+   .checkout-forms {
+       width: 100%;
+       order: 1;
+   }
     
     /* --- Order History Page --- */
     .order-header {
@@ -3919,75 +3972,8 @@ select.autofilled:focus {
         right: 20px;
     }
 
-   /* --- Prevent Horizontal Scrolling --- */
-   body {
-       overflow-x: hidden;
-   }
-
-   .container,
-   .main-content {
-       max-width: 100%;
-       overflow-x: hidden;
-   }
-
-   /* --- Browse Page Fixes --- */
-   .browse-carousel-container {
-       width: 100%;
-       max-width: 100%;
-       overflow: hidden;
-   }
-
-   .browse-carousel-main {
-       height: 280px;
-       width: 100%;
-   }
-
-   .browse-carousel-main img {
-       width: 100%;
-       height: 100%;
-       object-fit: cover;
-   }
-
-   .browse-carousel-thumbnails {
-       width: 100%;
-       overflow-x: auto;
-       padding: 0 10px;
-   }
-
-   /* --- Checkout Page Fixes --- */
-   .checkout-container {
-       width: 100%;
-       max-width: 100%;
-       padding: 0 15px;
-       box-sizing: border-box;
-   }
-
-   .cart-items-container {
-       width: 100%;
-       overflow-x: hidden;
-   }
-
-   .cart-item-details {
-       width: 100%;
-       overflow-wrap: break-word;
-   }
-
-   /* --- About Us Page - Bakery Image Fix --- */
-   .aboutus-content img,
-   .bakery-image,
-   .about-image {
-       max-width: 100% !important;
-       height: auto !important;
-       width: 100% !important;
-       display: block;
-   }
-
-   .aboutus-section {
-       padding: 20px 15px;
-       overflow: hidden;
-   }
-
 }
+
 
 
 
