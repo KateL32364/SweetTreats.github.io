@@ -1555,10 +1555,12 @@ button:disabled:hover,
 
 .aboutus-video video {
     width: 100%;
-    height: 400px;
     max-width: 900px;
+    height: auto; /* Changed from 400px - maintains aspect ratio */
     border-radius: 6px;
     box-shadow: var(--panel-shadow);
+    display: block; /* Removes inline spacing */
+    margin: 0 auto; /* Centers the video when it's less than 100% width */
 }
 
 /* --- Bakers --- */
@@ -3915,3 +3917,4 @@ select.autofilled:focus {
     }
 
 }
+
