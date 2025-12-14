@@ -1602,7 +1602,7 @@ function populateAccountPage() {
             row.innerHTML = `
                 <td>${order.id}</td>
                 <td>${order.date}</td>
-                <td>$${order.total}</td>
+                <td>$${order.total.toFixed(2)}</td>
                 <td>${order.status}</td>
                 <td><button class="tiny-btn" onclick="window.location.href='OrderHistoryPage.html'">View</button></td>
             `;
@@ -3698,3 +3698,4 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ================================================
    END OF FILE
    ================================================ */
+
