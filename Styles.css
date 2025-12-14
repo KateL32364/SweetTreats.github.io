@@ -3666,7 +3666,7 @@ select.autofilled:focus {
         grid-template-columns: 1fr;
     }
     
-    /* --- Browse Page --- */
+/* --- Browse Page --- */
 .browse-carousel-main {
     height: 280px;
 }
@@ -3690,9 +3690,11 @@ select.autofilled:focus {
     height: 200px;
 }
 
-/* Fix category tabs overflow */
+/* Fix category tabs and controls */
 .browse-controls {
-    padding: 0 10px;
+    padding: 0 15px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .browse-controls-top {
@@ -3702,11 +3704,13 @@ select.autofilled:focus {
 }
 
 .category-tabs {
+    display: flex;
+    gap: 10px;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 8px;
-    flex-wrap: nowrap; /* Keep tabs in one row */
+    padding: 10px 0;
+    margin-bottom: 0;
 }
 
 .category-tabs::-webkit-scrollbar {
@@ -3719,24 +3723,43 @@ select.autofilled:focus {
 }
 
 .category-tabs .tab {
-    flex-shrink: 0; /* Prevent tabs from shrinking */
+    flex-shrink: 0;
     white-space: nowrap;
+    min-width: fit-content;
 }
 
 .browse-actions {
     display: flex;
     gap: 10px;
     width: 100%;
+    justify-content: stretch;
 }
 
 .browse-actions .small-btn {
     flex: 1;
 }
 
+/* Fix product grid */
 .browse-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
-    padding: 0 10px;
+    padding: 0 15px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.browse-grid .item {
+    min-height: 300px;
+    width: 100%;
+}
+
+.browse-grid .item img {
+    height: 140px;
+}
+
+.browse-grid h4 {
+    font-size: 0.9rem;
+    min-height: 35px;
 }
     
     /* --- Product Page --- */
@@ -3975,6 +3998,7 @@ select.autofilled:focus {
     }
 
 }
+
 
 
 
