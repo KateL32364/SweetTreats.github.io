@@ -3667,60 +3667,77 @@ select.autofilled:focus {
     }
     
     /* --- Browse Page --- */
-    .browse-carousel-main {
-        height: 280px;
-    }
-    
-    .browse-carousel-thumbnails .bthumb {
-        width: 60px;
-        height: 45px;
-    }
-    
-    .review-row,
-    .review-row.reverse {
-        flex-direction: column;
-    }
-    
-    .review-text {
-        font-size: 1rem;
-    }
-    
-    .review-image {
-        width: 100%;
-        height: 200px;
-    }
-   
-   .category-tabs,
-   .browse-tabs {
-       overflow-x: auto;
-       overflow-y: hidden;
-       white-space: nowrap;
-       -webkit-overflow-scrolling: touch;
-       scrollbar-width: thin;
-       padding-bottom: 5px;
-   }
+.browse-carousel-main {
+    height: 280px;
+}
 
-   .category-tabs::-webkit-scrollbar {
-       height: 4px;
-   }
+.browse-carousel-thumbnails .bthumb {
+    width: 60px;
+    height: 45px;
+}
 
-   .category-tabs::-webkit-scrollbar-thumb {
-       background: #ccc;
-       border-radius: 4px;
-   }
+.review-row,
+.review-row.reverse {
+    flex-direction: column;
+}
 
-   /* If tabs are in a flex container */
-   .category-tabs {
-       display: flex;
-       flex-wrap: nowrap;
-       gap: 8px;
-   }
+.review-text {
+    font-size: 1rem;
+}
 
-   .category-tab,
-   .tab-button {
-       flex-shrink: 0;
-       min-width: fit-content;
-   }
+.review-image {
+    width: 100%;
+    height: 200px;
+}
+
+/* Fix category tabs overflow */
+.browse-controls {
+    padding: 0 10px;
+}
+
+.browse-controls-top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+}
+
+.category-tabs {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    flex-wrap: nowrap; /* Keep tabs in one row */
+}
+
+.category-tabs::-webkit-scrollbar {
+    height: 6px;
+}
+
+.category-tabs::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.category-tabs .tab {
+    flex-shrink: 0; /* Prevent tabs from shrinking */
+    white-space: nowrap;
+}
+
+.browse-actions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.browse-actions .small-btn {
+    flex: 1;
+}
+
+.browse-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+}
     
     /* --- Product Page --- */
     .product-details-section {
@@ -3841,69 +3858,54 @@ select.autofilled:focus {
         width: 100%;
     }
     
-    /* --- Checkout Page --- */
-    .order-summary-panel {
-        position: static;
-        margin-top: 20px;
-    }
-    
-    .fulfillment-options {
-        grid-template-columns: 1fr;
-    }
-    
-    .fulfillment-card {
-        padding: 15px;
-    }
-    
-    .fulfillment-icon {
-        font-size: 2rem;
-    }
-    
-    .autofill-indicator {
-        padding: 10px 12px;
-    }
-    
-    .autofill-text {
-        font-size: 0.85rem;
-    }
-    
-    .reward-code-section {
-        flex-direction: column;
-    }
-    
-    .apply-code-btn {
-        width: 100%;
-    }
-    
-    .cart-item {
-        flex-direction: column;
-    }
-    
-    .cart-item-image {
-        width: 100%;
-        height: 150px;
-    }
-   
-   .checkout-main,
-   .checkout-grid,
-   .checkout-layout {
-       display: flex;
-       flex-direction: column;
-       width: 100%;
-   }
+/* --- Checkout Page --- */
+.checkout-grid {
+    grid-template-columns: 1fr !important; /* Force single column */
+    gap: 20px;
+}
 
-   .order-summary-panel {
-       position: static !important;
-       width: 100% !important;
-       margin-top: 20px;
-       order: 2; /* Moves it below other content */
-   }
+.order-summary-panel {
+    position: static !important; /* Remove sticky positioning */
+    width: 100% !important;
+    margin-top: 0;
+}
 
-   .checkout-left,
-   .checkout-forms {
-       width: 100%;
-       order: 1;
-   }
+.fulfillment-options {
+    grid-template-columns: 1fr;
+}
+
+.fulfillment-card {
+    padding: 15px;
+}
+
+.fulfillment-icon {
+    font-size: 2rem;
+}
+
+.autofill-indicator {
+    padding: 10px 12px;
+}
+
+.autofill-text {
+    font-size: 0.85rem;
+}
+
+.reward-code-section {
+    flex-direction: column;
+}
+
+.apply-code-btn {
+    width: 100%;
+}
+
+.cart-item {
+    flex-direction: column;
+}
+
+.cart-item-image {
+    width: 100%;
+    height: 150px;
+}
     
     /* --- Order History Page --- */
     .order-header {
@@ -3973,6 +3975,7 @@ select.autofilled:focus {
     }
 
 }
+
 
 
 
