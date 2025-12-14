@@ -4031,7 +4031,25 @@ select.autofilled:focus {
         right: 20px;
     }
 
+   /* --- About Us Page --- */
+.about-story {
+    flex-direction: column;
 }
+
+.about-story img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+}
+
+.story-left,
+.story-right {
+    flex: 1 1 100%;
+    width: 100%;
+}
+
+}
+
 
 
 
