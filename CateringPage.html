@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats - Catering</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+    		HEADER
+========================================== -->
+    <header>
+        <div class="cart-icon">
+           <a href="CheckoutPage.html">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"        class="size-6">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+              </svg>
+              <span class="cart-count" id="cart-count">0</span>
+           </a>
+        </div>
+
+        <div class="top-bar">
+            <div class="logo">
+    		<a href="HomePage.html">
+        		<img src="SweetTreatsLogo.png" alt="Sweet Treats Logo">
+    		</a>
+	    </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="HomePage.html">Home</a></li>
+                    <li><a href="BrowsePage.html">Browse</a></li>
+                    <li><a href="CateringPage.html">Catering</a></li>
+                    <li><a href="ContactUs.html">Contact</a></li>
+                    <li><a href="AboutUsPage.html">About Us</a></li>
+                    <li><a href="LoginPage.html">Login</a></li>
+                    <li><a href="RegisterPage.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- =====================================
+        CATERING PAGE
+====================================== -->
+
+<main class="page-main">
+    <div class="title-container">
+    	<h1 class="page-title">Catering</h1>
+</div>
+
+    <!-- TOP PANEL: CAROUSEL -->
+    <section class="panel catering-panel catering-carousel-panel">
+        <div class="carousel-wrapper">
+            <div id="slideshow-container" class="carousel-main" aria-hidden="false">
+                <div class="cslide active"><img src="images/Catering1.png" alt=""></div>
+                <div class="cslide"><img src="images/Catering2.png" alt=""></div>
+                <div class="cslide"><img src="images/Catering3.png" alt=""></div>
+                <div class="cslide"><img src="images/Catering4.png" alt=""></div>
+                <div class="cslide"><img src="images/Catering5.png" alt=""></div>
+            </div>
+
+            <div class="carousel-thumbnails" role="tablist" aria-label="Catering thumbnails">
+                <button class="cthumb" data-index="0" aria-label="Slide 1"><img src="images/Catering1.png" alt=""></button>
+                <button class="cthumb" data-index="1" aria-label="Slide 2"><img src="images/Catering2.png" alt=""></button>
+                <button class="cthumb" data-index="2" aria-label="Slide 3"><img src="images/Catering3.png" alt=""></button>
+                <button class="cthumb" data-index="3" aria-label="Slide 4"><img src="images/Catering4.png" alt=""></button>
+                <button class="cthumb" data-index="4" aria-label="Slide 5"><img src="images/Catering5.png" alt=""></button>
+            </div>
+        </div>
+
+        <p class="catering-description"><center>Please fill out the form below so we can begin crafting your perfect sweet treat!</p>
+    </section></center>
+
+    <!-- BOTTOM PANEL: ORDER FORM (calendar LEFT, items RIGHT) -->
+    <section class="panel catering-panel catering-form-panel">
+        <h2 class="section-title"><center>Order Information</h2></center>
+
+        <!-- grid: left = calendar (narrow), right = items (wide) -->
+        <form class="catering-form-grid" aria-label="Catering order form">
+            <!-- LEFT: calendar + event info -->
+            <div class="catering-calendar-col">
+                <div class="input-group">
+                    <label for="event-date" class="sr-only">Event date</label>
+                    <input id="event-date" type="date" placeholder="Event date">
+                </div>
+
+                <div class="input-group">
+                    <label for="event-type" class="sr-only">Event type</label>
+                    <input id="event-type" type="text" placeholder="Event type">
+                </div>
+
+                <div class="input-group">
+                    <label for="special-requests" class="sr-only">Special requests</label>
+                    <textarea id="special-requests" placeholder="Special requests"></textarea>
+                </div>
+            </div>
+
+            <!-- RIGHT: select order items -->
+            <div class="catering-items-col">
+                <div class="input-group">
+                    <label class="sr-only">Item 1</label>
+                    <select aria-label="Catering item 1">
+                        <option>Select Catering Item 1</option>
+                        <option>Sheet Cake</option>
+                        <option>2 Layer Cake</option>
+                        <option>3 Layer Cake</option>
+                        <option>Cupcakes (Order of 5)</option>
+                        <option>Cookies (Dozen)</option>
+                        <option>Cookie Cake</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <select aria-label="Catering item 2">
+                        <option>Select Catering Item 2</option>
+                        <option>Sheet Cake</option>
+                        <option>2 Layer Cake</option>
+                        <option>3 Layer Cake</option>
+                        <option>Cupcakes (Order of 5)</option>
+                        <option>Cookies (Dozen)</option>
+                        <option>Cookie Cake</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <select aria-label="Catering item 3">
+                        <option>Select Catering Item 3</option>
+                        <option>Sheet Cake</option>
+                        <option>2 Layer Cake</option>
+                        <option>3 Layer Cake</option>
+                        <option>Cupcakes (Order of 5)</option>
+                        <option>Cookies (Dozen)</option>
+                        <option>Cookie Cake</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <select aria-label="Catering item 4">
+                        <option>Select Catering Item 4</option>
+                        <option>Sheet Cake</option>
+                        <option>2 Layer Cake</option>
+                        <option>3 Layer Cake</option>
+                        <option>Cupcakes (Order of 5)</option>
+                        <option>Cookies (Dozen)</option>
+                        <option>Cookie Cake</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <select aria-label="Catering item 5">
+                        <option>Select Catering Item 5</option>
+                        <option>Sheet Cake</option>
+                        <option>2 Layer Cake</option>
+                        <option>3 Layer Cake</option>
+                        <option>Cupcakes (Order of 5)</option>
+                        <option>Cookies (Dozen)</option>
+                        <option>Cookie Cake</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <div class="catering-button-row">
+            <button class="btn-primary" type="button">Add to Cart</button>
+        </div>
+    </section>
+</main>
+
+    <!-- =====================================
+    		FOOTER
+========================================== -->
+        <footer>
+        <div class="footer-top">Follow Sweet Treats
+	   <div class="social-icons">
+		<div class="social-icon"><img src="images/insta.png"></div>
+		<div class="social-icon"><img src="images/facebook.png"></div>
+	   </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Sweet Treats</h4>
+                <ul>
+                    <li><a href="AboutUsPage.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Browse Treats</h4>
+                <ul>
+                    <li><a href="BrowsePage.html">Browse Page</a></li>
+                    <li><a href="CateringPage.html">Catering</a></li>
+                    <li><a href="#">Specials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Manage Account</h4>
+                <ul>
+                    <li><a href="LoginPage.html">Login</a></li>
+                    <li><a href="RegisterPage.html">Register</a></li>
+                    <li><a href="AccountPage.html">My Account</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="#">Privacy & Cookies</a>
+            <a href="#">Terms of Use</a>
+            <span>2025 Sweet Treats</span>
+        </div>
+    </footer>
+
+<script src="SweetTreatsJS.js"></script>
+
+    <!-- =====================================
+    		LIVE CHAT WIDGET
+========================================== -->
+
+<div id="chat-widget" class="chat-widget">
+    <button id="chat-toggle" class="chat-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span class="chat-notification" id="chat-notification" style="display: none;">1</span>
+    </button>
+
+    <div id="chat-box" class="chat-box" style="display: none;">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <h3>Customer Support</h3>
+                <p class="chat-status">Online</p>
+            </div>
+            <button id="chat-close" class="chat-close-btn">✕</button>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+            <div class="chat-message bot-message">
+                <div class="message-avatar">🍰</div>
+                <div class="message-content">
+                    <p>Hi! Welcome to Sweet Treats! How can I help you today?</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message...">
+            <button id="chat-send" class="chat-send-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

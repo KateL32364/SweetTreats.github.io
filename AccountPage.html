@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats - My Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- =====================================
+    		HEADER
+========================================== -->
+<header>
+    <div class="cart-icon">
+           <a href="CheckoutPage.html">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"        class="size-6">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+              </svg>
+              <span class="cart-count" id="cart-count">0</span>
+           </a>
+        </div>
+
+    <div class="top-bar">
+        <div class="logo">
+    		<a href="HomePage.html">
+        		<img src="SweetTreatsLogo.png" alt="Sweet Treats Logo">
+    		</a>
+	    </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="BrowsePage.html">Browse</a></li>
+                <li><a href="CateringPage.html">Catering</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+                <li><a href="AboutUsPage.html">About Us</a></li>
+                <li><a href="LoginPage.html">Login</a></li>
+                <li><a href="RegisterPage.html">Register</a></li>
+                <li><a href="AccountPage.html">My Account</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ===================================
+    MAIN CONTENT – ACCOUNT DASHBOARD
+======================================== -->
+<main class="account-main">
+
+    <div class="title-container">
+    	<h1 class="page-title">My Account</h1>
+    </div>
+
+    <!-- ================================
+        	ACCOUNT INFORMATION
+    ===================================== -->
+    <section class="account-info-section">
+
+        <h2 class="section-heading">Account Information</h2>
+
+        <div class="profile-picture-container">
+        <div class="profile-icon">
+            <img src="images/profile-placeholder.png">
+        </div>
+        
+        <div class="profile-picture-actions">
+            <button type="button" class="tiny-btn" onclick="uploadProfilePicture()">Upload Photo</button>
+            <button type="button" class="tiny-btn grey" onclick="removeProfilePicture()">Remove</button>
+        </div>
+    </div>
+
+        <p class="account-name">User Name</p>
+        <p class="account-email">user@example.com</p>
+
+       <form class="account-info-form">
+
+    	  <label>Full Name</label>
+    	  <input id="full-name-input" type="text" placeholder="Full Name" readonly>
+
+    	  <label>Username</label>
+    	  <input id="username-input" type="text" placeholder="Username" readonly>
+
+    	  <label>Phone Number</label>
+    	  <input id="phone-input" type="text" placeholder="(000)-000-0000" readonly>
+
+    	  <!-- Street Address -->
+	  <div class="form-group">
+    	  	<label for="street-address-input">Street Address</label>
+    	  	<input type="text" id="street-address-input" placeholder="Street Address" readonly>
+	  </div>
+
+	  <!-- City and State in a row -->
+	  <div class="form-row">
+    	     <div class="form-group">
+        	<label for="city-input">City</label>
+        	<input type="text" id="city-input" placeholder="City" readonly>
+    	  </div>
+    
+    	  <div class="form-group">
+        	<label for="state-input">State</label>
+			<select id="state-input" disabled>
+    				<option value="">Select State</option>
+    				<option value="AL">Alabama</option>
+    				<option value="AK">Alaska</option>
+    				<option value="AZ">Arizona</option>
+    				<option value="AR">Arkansas</option>
+    				<option value="CA">California</option>
+    				<option value="CO">Colorado</option>
+    				<option value="CT">Connecticut</option>
+    				<option value="DE">Delaware</option>
+    				<option value="FL">Florida</option>
+    				<option value="GA">Georgia</option>
+    				<option value="HI">Hawaii</option>
+    				<option value="ID">Idaho</option>
+    				<option value="IL">Illinois</option>
+    				<option value="IN">Indiana</option>
+    				<option value="IA">Iowa</option>
+    				<option value="KS">Kansas</option>
+    				<option value="KY">Kentucky</option>
+    				<option value="LA">Louisiana</option>
+    				<option value="ME">Maine</option>
+    				<option value="MD">Maryland</option>
+    				<option value="MA">Massachusetts</option>
+    				<option value="MI">Michigan</option>
+    				<option value="MN">Minnesota</option>
+    				<option value="MS">Mississippi</option>
+    				<option value="MO">Missouri</option>
+    				<option value="MT">Montana</option>
+    				<option value="NE">Nebraska</option>
+    				<option value="NV">Nevada</option>
+    				<option value="NH">New Hampshire</option>
+    				<option value="NJ">New Jersey</option>
+    				<option value="NM">New Mexico</option>
+    				<option value="NY">New York</option>
+    				<option value="NC">North Carolina</option>
+    				<option value="ND">North Dakota</option>
+    				<option value="OH">Ohio</option>
+    				<option value="OK">Oklahoma</option>
+    				<option value="OR">Oregon</option>
+    				<option value="PA">Pennsylvania</option>
+    				<option value="RI">Rhode Island</option>
+    				<option value="SC">South Carolina</option>
+    				<option value="SD">South Dakota</option>
+    				<option value="TN">Tennessee</option>
+    				<option value="TX">Texas</option>
+    				<option value="UT">Utah</option>
+    				<option value="VT">Vermont</option>
+    				<option value="VA">Virginia</option>
+    				<option value="WA">Washington</option>
+    				<option value="WV">West Virginia</option>
+    				<option value="WI">Wisconsin</option>
+    				<option value="WY">Wyoming</option>
+    				<option value="DC">District of Columbia</option>
+			   </select>
+    	     </div>
+	  </div>
+
+	  <!-- ZIP Code -->
+	  <div class="form-group">
+    		<label for="zip-code-input">ZIP Code</label>
+    		<input type="text" id="zip-code-input" placeholder="ZIP Code" readonly>
+	  </div>
+
+    	  <div class="account-buttons">
+        	  <button type="button" id="edit-info-btn" class="small-btn">Edit Information</button>
+        	  <button type="button" class="small-btn grey">Change Password</button>
+    </div>
+
+</form>
+    </section>
+
+    <!-- ========================================
+        	ORDER HISTORY
+    ============================================= -->
+    <section class="account-section">
+        <h2 class="section-heading">Order History</h2>
+
+        <div class="order-box">
+            <table class="order-table">
+                <tr>
+                    <th>Order #</th>
+                    <th>Date</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                </tr>
+            </table>
+        </div>
+
+        <button class="medium-btn" onclick="window.location.href='OrderHistoryPage.html'">View All Orders</button>
+    </section>
+
+    <!-- ===================================
+        	REWARDS SUMMARY
+    ======================================== -->
+    <section class="account-section">
+        <h2 class="section-heading">Rewards Summary</h2>
+
+        <div class="rewards-box">
+            <p class="rewards-number">XXX</p>
+            <p class="rewards-label">Points Available</p>
+        </div>
+
+        <button class="medium-btn" onclick="window.location.href='RewardsPage.html'">View Reward History</button>
+    </section>
+
+    <!-- ===================================
+        	PAYMENT METHODS
+    ======================================== -->
+    <section class="account-section">
+        <h2 class="section-heading">Payment Methods</h2>
+
+        <div class="payment-box"> 
+        </div>
+
+        <div class="payment-box">
+        </div>
+
+        <button class="medium-btn" onclick="showAddPaymentModal()">Add New Payment Method</button>
+    </section>
+
+    <!-- ==============================
+        	ACCOUNT OPTIONS
+    =================================== -->
+    <section class="account-section">
+        <h2 class="section-heading">Account Options</h2>
+
+        <button class="large-btn grey">Log Out</button>
+        <button class="large-btn red">Delete Account</button>
+    </section>
+
+</main>
+
+<!-- ======================
+    	FOOTER
+=========================== -->
+    <footer>
+        <div class="footer-top">Follow Sweet Treats
+	   <div class="social-icons">
+		<div class="social-icon"><img src="images/insta.png"></div>
+		<div class="social-icon"><img src="images/facebook.png"></div>
+	   </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Sweet Treats</h4>
+                <ul>
+                    <li><a href="AboutUsPage.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Browse Treats</h4>
+                <ul>
+                    <li><a href="BrowsePage.html">Browse Page</a></li>
+                    <li><a href="CateringPage.html">Catering</a></li>
+                    <li><a href="#">Specials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Manage Account</h4>
+                <ul>
+                    <li><a href="LoginPage.html">Login</a></li>
+                    <li><a href="RegisterPage.html">Register</a></li>
+                    <li><a href="AccountPage.html">My Account</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="#">Privacy & Cookies</a>
+            <a href="#">Terms of Use</a>
+            <span>2025 Sweet Treats</span>
+        </div>
+    </footer>
+
+<script src="SweetTreatsJS.js"></script>
+
+    <!-- =====================================
+    		LIVE CHAT WIDGET
+========================================== -->
+
+<div id="chat-widget" class="chat-widget">
+    <button id="chat-toggle" class="chat-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span class="chat-notification" id="chat-notification" style="display: none;">1</span>
+    </button>
+
+    <div id="chat-box" class="chat-box" style="display: none;">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <h3>Customer Support</h3>
+                <p class="chat-status">Online</p>
+            </div>
+            <button id="chat-close" class="chat-close-btn">✕</button>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+            <div class="chat-message bot-message">
+                <div class="message-avatar">🍰</div>
+                <div class="message-content">
+                    <p>Hi! Welcome to Sweet Treats! How can I help you today?</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message...">
+            <button id="chat-send" class="chat-send-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+

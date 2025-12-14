@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats - Order History</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+    		HEADER
+========================================== -->
+    <header>
+        <div class="cart-icon">
+           <a href="CheckoutPage.html">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"        class="size-6">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+              </svg>
+              <span class="cart-count" id="cart-count">0</span>
+           </a>
+        </div>
+
+        <div class="top-bar">
+            <div class="logo">
+    		<a href="HomePage.html">
+        		<img src="SweetTreatsLogo.png" alt="Sweet Treats Logo">
+    		</a>
+	    </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="HomePage.html">Home</a></li>
+                    <li><a href="BrowsePage.html">Browse</a></li>
+                    <li><a href="CateringPage.html">Catering</a></li>
+                    <li><a href="ContactUs.html">Contact</a></li>
+                    <li><a href="AboutUsPage.html">About Us</a></li>
+                    <li><a href="LoginPage.html">Login</a></li>
+                    <li><a href="RegisterPage.html">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- ============================================
+     ORDER HISTORY MAIN
+============================================ -->
+
+<div class="title-container">
+    <h1 class="page-title">Order History</h1>
+</div>
+
+<main class="order-history-main">
+    
+    <!-- Filter/Sort Options -->
+    <section class="order-filter-section">
+        <div class="order-filters">
+            <select id="order-status-filter">
+                <option value="all">All Orders</option>
+                <option value="completed">Completed</option>
+                <option value="processing">Processing</option>
+                <option value="cancelled">Cancelled</option>
+            </select>
+
+            <select id="order-sort">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="highest">Highest Price</option>
+                <option value="lowest">Lowest Price</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Orders List -->
+    <section class="orders-list-section" id="orders-list">
+        <!-- Orders will be populated by JavaScript -->
+        <!-- Sample order structure: -->
+        <!--
+        <div class="order-card">
+            <div class="order-header">
+                <div class="order-header-left">
+                    <h3>Order #12345</h3>
+                    <p class="order-date">January 15, 2025</p>
+                </div>
+                <div class="order-header-right">
+                    <span class="order-status status-completed">Completed</span>
+                    <p class="order-total">$24.50</p>
+                </div>
+            </div>
+            
+            <div class="order-items">
+                <div class="order-item">
+                    <img src="images/chocolate-croissant.jpg" alt="Product">
+                    <div class="order-item-info">
+                        <h4>Chocolate Croissant</h4>
+                        <p>Quantity: 2</p>
+                    </div>
+                    <p class="order-item-price">$8.00</p>
+                </div>
+            </div>
+            
+            <div class="order-actions">
+                <button class="order-btn view-details-btn">View Details</button>
+                <button class="order-btn reorder-btn">Reorder</button>
+            </div>
+        </div>
+        -->
+    </section>
+
+    <!-- Empty State (shown when no orders) -->
+    <section class="empty-orders" id="empty-orders" style="display: none;">
+        <div class="empty-orders-content">
+            <div class="empty-icon">📦</div>
+            <h2>No Orders Yet</h2>
+            <p>Start shopping to see your order history here!</p>
+            <a href="BrowsePage.html" class="browse-link-btn">Browse Products</a>
+        </div>
+    </section>
+
+</main>
+
+
+    <!-- =====================================
+    		FOOTER
+========================================== -->
+        <footer>
+        <div class="footer-top">Follow Sweet Treats
+	   <div class="social-icons">
+		<div class="social-icon"><img src="images/insta.png"></div>
+		<div class="social-icon"><img src="images/facebook.png"></div>
+	   </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Sweet Treats</h4>
+                <ul>
+                    <li><a href="AboutUsPage.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Browse Treats</h4>
+                <ul>
+                    <li><a href="BrowsePage.html">Browse Page</a></li>
+                    <li><a href="CateringPage.html">Catering</a></li>
+                    <li><a href="#">Specials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Manage Account</h4>
+                <ul>
+                    <li><a href="LoginPage.html">Login</a></li>
+                    <li><a href="RegisterPage.html">Register</a></li>
+                    <li><a href="AccountPage.html">My Account</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="#">Privacy & Cookies</a>
+            <a href="#">Terms of Use</a>
+            <span>2025 Sweet Treats</span>
+        </div>
+    </footer>
+
+<script src="SweetTreatsJS.js"></script>
+
+    <!-- =====================================
+    		LIVE CHAT WIDGET
+========================================== -->
+
+<div id="chat-widget" class="chat-widget">
+    <button id="chat-toggle" class="chat-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span class="chat-notification" id="chat-notification" style="display: none;">1</span>
+    </button>
+
+    <div id="chat-box" class="chat-box" style="display: none;">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <h3>Customer Support</h3>
+                <p class="chat-status">Online</p>
+            </div>
+            <button id="chat-close" class="chat-close-btn">✕</button>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+            <div class="chat-message bot-message">
+                <div class="message-avatar">🍰</div>
+                <div class="message-content">
+                    <p>Hi! Welcome to Sweet Treats! How can I help you today?</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message...">
+            <button id="chat-send" class="chat-send-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

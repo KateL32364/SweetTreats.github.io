@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Treats - Browse</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+    		HEADER
+========================================== -->
+    <header>
+        <div class="cart-icon">
+           <a href="CheckoutPage.html">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"        class="size-6">
+                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+              </svg>
+              <span class="cart-count" id="cart-count">0</span>
+           </a>
+        </div>
+
+        <div class="top-bar">
+            <div class="logo">
+    		<a href="HomePage.html">
+        		<img src="SweetTreatsLogo.png" alt="Sweet Treats Logo">
+    		</a>
+	    </div>
+
+            <nav class="main-nav">
+                <ul>
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="BrowsePage.html">Browse</a></li>
+                <li><a href="CateringPage.html">Catering</a></li>
+                <li><a href="ContactUs.html">Contact</a></li>
+                <li><a href="AboutUsPage.html">About Us</a></li>
+                <li><a href="LoginPage.html">Login</a></li>
+                <li><a href="RegisterPage.html">Register</a></li>
+                <li><a href="AccountPage.html">My Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<!-- ============================================
+     CAROUSEL SECTION
+============================================ -->
+
+<div class="title-container">
+    	<h1 class="page-title">Featured</h1>
+</div>
+
+<!-- FEATURED CAROUSEL -->
+<section class="panel browse-panel browse-carousel-panel">
+    <div class="browse-wrapper">
+        <div id="browse-slideshow-container" class="browse-carousel-main" aria-hidden="false">
+            <div class="bslide active"><img src="images/chocolate-croissant.jpg" alt=""></div>
+            <div class="bslide"><img src="images/cinnamon-roll.jpg" alt=""></div>
+            <div class="bslide"><img src="images/blueberry-muffin.jpg" alt=""></div>
+            <div class="bslide"><img src="images/lemon-tart.jpg" alt=""></div>
+        </div>
+
+        <div class="browse-carousel-thumbnails" role="tablist" aria-label="Browse thumbnails">
+            <button class="bthumb" data-index="0" aria-label="Slide 1"><img src="images/chocolate-croissant.jpg" alt=""></button>
+            <button class="bthumb" data-index="1" aria-label="Slide 2"><img src="images/cinnamon-roll.jpg" alt=""></button>
+            <button class="bthumb" data-index="2" aria-label="Slide 3"><img src="images/blueberry-muffin.jpg" alt=""></button>
+            <button class="bthumb" data-index="3" aria-label="Slide 4"><img src="images/lemon-tart.jpg" alt=""></button>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================
+     REVIEW SECTION
+============================================ -->
+
+<div class="title-container">
+    	<h1 class="reviews-title">Reviews</h1>
+</div>
+<section class="review-section">
+    <div class="review-wrapper">
+
+        <!-- Review #1 (normal) -->
+        <div class="review-row">
+            <div class="review-text">
+                <p>"Flaky, buttery, and delicious! The scones here are heavenly — I'm already planning my next visit."</p>
+            </div>
+            <div class="review-image"><img src="images/scone.jpg" alt=""></div>
+        </div>
+
+        <!-- Review #2 (REVERSED) -->
+        <div class="review-row reverse">
+            <div class="review-text">
+                <p>"Amazing pastries and friendly service! Perfect croissant, will return."</p>
+            </div>
+            <div class="review-image"><img src="images/chocolate-croissant.jpg" alt=""></div>
+        </div>
+
+        <!-- Review #3 (normal) -->
+        <div class="review-row">
+            <div class="review-text">
+                <p>"Amazing selection. Decadent yummy things. Will be back. Nice to see a bakery open late."</p>
+            </div>
+            <div class="review-image"><img src="images/red-velvet-cupcake.jpg" alt=""></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============================================
+     CATEGORY BAR + SEARCH & FILTER
+============================================ -->
+
+<div class="title-container">
+    	<h1 class="browse-title">Browse</h1>
+</div>
+<section class="browse-controls">
+    <!-- Top row: tabs and buttons together -->
+    <div class="browse-controls-top">
+        <div class="category-tabs">
+            <button class="tab active">All</button>
+            <button class="tab">Breads</button>
+            <button class="tab">Cakes</button>
+            <button class="tab">Cookies</button>
+            <button class="tab">Cupcakes</button>
+            <button class="tab">Muffins</button>
+            <button class="tab">Pastries</button>
+            <button class="tab">Tarts</button>
+        </div>
+
+        <div class="browse-actions">
+            <button id="search-btn" class="small-btn">Search</button>
+            <button id="filter-btn" class="small-btn grey">Filter</button>
+        </div>
+    </div>
+
+    <!-- These appear below when activated -->
+    <div id="search-container" class="action-row"></div>
+    <div id="filter-container" class="action-row"></div>
+</section>
+
+
+<!-- ============================================
+     PRODUCT GRID
+============================================ -->
+
+<section class="browse-grid"></section>
+
+    <!-- =====================================
+    		FOOTER
+========================================== -->
+        <footer>
+        <div class="footer-top">Follow Sweet Treats
+	   <div class="social-icons">
+		<div class="social-icon"><img src="images/insta.png"></div>
+		<div class="social-icon"><img src="images/facebook.png"></div>
+	   </div>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-column">
+                <h4>Sweet Treats</h4>
+                <ul>
+                    <li><a href="AboutUsPage.html">About Us</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Browse Treats</h4>
+                <ul>
+                    <li><a href="BrowsePage.html">Browse Page</a></li>
+                    <li><a href="CateringPage.html">Catering</a></li>
+                    <li><a href="#">Specials</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Manage Account</h4>
+                <ul>
+                    <li><a href="LoginPage.html">Login</a></li>
+                    <li><a href="RegisterPage.html">Register</a></li>
+                    <li><a href="AccountPage.html">My Account</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <a href="#">Privacy & Cookies</a>
+            <a href="#">Terms of Use</a>
+            <span>2025 Sweet Treats</span>
+        </div>
+    </footer>
+
+<script src="SweetTreatsJS.js"></script>
+
+    <!-- =====================================
+    		LIVE CHAT WIDGET
+========================================== -->
+
+<div id="chat-widget" class="chat-widget">
+    <button id="chat-toggle" class="chat-toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span class="chat-notification" id="chat-notification" style="display: none;">1</span>
+    </button>
+
+    <div id="chat-box" class="chat-box" style="display: none;">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <h3>Customer Support</h3>
+                <p class="chat-status">Online</p>
+            </div>
+            <button id="chat-close" class="chat-close-btn">✕</button>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+            <div class="chat-message bot-message">
+                <div class="message-avatar">🍰</div>
+                <div class="message-content">
+                    <p>Hi! Welcome to Sweet Treats! How can I help you today?</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="Type your message...">
+            <button id="chat-send" class="chat-send-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
