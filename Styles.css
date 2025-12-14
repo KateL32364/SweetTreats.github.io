@@ -4023,21 +4023,25 @@ select.autofilled:focus {
         height: 100px;
     }
     
-    /* --- Live Chat --- */
+/* --- Live Chat --- */
 .chat-box {
-    width: 100vw !important;
-    height: 100vh !important;
-    bottom: 0 !important;
-    right: 0 !important;
-    left: 0 !important;
-    top: 0 !important;
-    border-radius: 0 !important;
-    max-width: 100% !important;
+    width: calc(100vw - 20px) !important;
+    height: 70vh !important;
+    bottom: 80px !important;
+    right: 10px !important;
+    left: 10px !important;
+    border-radius: 15px !important;
+    top: auto !important;
+}
+
+.chat-messages {
+    max-height: calc(70vh - 180px) !important;
+    overflow-y: auto !important;
 }
 
 .chat-toggle {
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
 }
 
    /* --- About Us Page --- */
@@ -4058,6 +4062,7 @@ select.autofilled:focus {
 }
 
 }
+
 
 
 
