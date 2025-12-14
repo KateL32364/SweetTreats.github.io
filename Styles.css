@@ -1554,7 +1554,7 @@ button:disabled:hover,
 }
 
 .aboutus-video video {
-    width: 90%;
+    width: 100%;
     height: 400px;
     max-width: 900px;
     border-radius: 6px;
@@ -3913,4 +3913,5 @@ select.autofilled:focus {
         bottom: 90px;
         right: 20px;
     }
+
 }
