@@ -3690,17 +3690,24 @@ select.autofilled:focus {
     height: 200px;
 }
 
+/* Prevent horizontal scroll */
+body {
+    overflow-x: hidden;
+}
+
 /* Fix category tabs and controls */
 .browse-controls {
     padding: 0 15px;
     max-width: 100%;
-    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .browse-controls-top {
+    display: flex;
     flex-direction: column;
-    align-items: stretch;
     gap: 15px;
+    width: 100%;
 }
 
 .category-tabs {
@@ -3710,7 +3717,8 @@ select.autofilled:focus {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     padding: 10px 0;
-    margin-bottom: 0;
+    width: 100%;
+    order: 1; /* Tabs first */
 }
 
 .category-tabs::-webkit-scrollbar {
@@ -3725,41 +3733,54 @@ select.autofilled:focus {
 .category-tabs .tab {
     flex-shrink: 0;
     white-space: nowrap;
-    min-width: fit-content;
 }
 
 .browse-actions {
     display: flex;
     gap: 10px;
     width: 100%;
-    justify-content: stretch;
+    order: 2; /* Buttons second, below tabs */
 }
 
 .browse-actions .small-btn {
     flex: 1;
 }
 
-/* Fix product grid */
+/* Fix product grid overflow */
 .browse-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px;
     padding: 0 15px;
     max-width: 100%;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .browse-grid .item {
-    min-height: 300px;
+    min-height: 280px;
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
 }
 
 .browse-grid .item img {
-    height: 140px;
+    height: 120px;
+    width: 100%;
 }
 
 .browse-grid h4 {
+    font-size: 0.85rem;
+    min-height: 32px;
+}
+
+.browse-grid .product-price {
+    font-size: 1rem;
+}
+
+.browse-grid .add-to-cart-btn {
+    padding: 8px;
     font-size: 0.9rem;
-    min-height: 35px;
 }
     
     /* --- Product Page --- */
@@ -3998,6 +4019,7 @@ select.autofilled:focus {
     }
 
 }
+
 
 
 
