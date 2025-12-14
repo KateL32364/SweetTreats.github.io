@@ -687,7 +687,7 @@ button:disabled:hover,
 
 .gateway-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Changed to exactly 3 columns */
     gap: 30px;
     margin-top: 40px;
 }
@@ -3917,4 +3917,5 @@ select.autofilled:focus {
     }
 
 }
+
 
