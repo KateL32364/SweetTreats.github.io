@@ -4024,12 +4024,21 @@ select.autofilled:focus {
     }
     
     /* --- Live Chat --- */
-    .chat-box {
-        width: calc(100vw - 40px);
-        height: calc(100vh - 120px);
-        bottom: 90px;
-        right: 20px;
-    }
+.chat-box {
+    width: 100vw !important;
+    height: 100vh !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    top: 0 !important;
+    border-radius: 0 !important;
+    max-width: 100% !important;
+}
+
+.chat-toggle {
+    bottom: 20px;
+    right: 20px;
+}
 
    /* --- About Us Page --- */
 .about-story {
@@ -4049,6 +4058,7 @@ select.autofilled:focus {
 }
 
 }
+
 
 
 
