@@ -687,9 +687,12 @@ button:disabled:hover,
 
 .gateway-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Changed to exactly 3 columns */
+    grid-template-columns: repeat(3, 1fr); /* Exactly 3 columns */
     gap: 30px;
     margin-top: 40px;
+    max-width: 1100px; /* Constrain width to prevent stretching */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .gateway-card {
@@ -3917,5 +3920,6 @@ select.autofilled:focus {
     }
 
 }
+
 
 
